@@ -1,0 +1,93 @@
+.home {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 60px 80px 0 80px;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  /* ⚙️ Fondo con el dibujo */
+  background-image: url('../assets/dibujo.png');
+  background-repeat: no-repeat;
+  background-size: 520px; /* 🔥 más grande */
+  background-position: 0 85%; /* 👈 ajustado para que se vea completo y pegado */
+}
+
+.home-text {
+  z-index: 2;
+  width: 50%;
+  margin-top: 20px;
+}
+
+.home-text h1 {
+  font-size: 4rem;
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.home-text h2 {
+  font-size: 2.3rem;
+  color: #f9b42c;
+  margin-top: 10px;
+  line-height: 1.2;
+}
+
+.home-text span {
+  color: #f9b42c;
+}
+
+.home-buttons {
+  margin-top: 30px;
+  background-color: #C08C2B; /* fondo dorado */
+  border-radius: 20px;
+  padding: 15px 25px; /* agrega espacio interno */
+  display: inline-flex; /* los botones se alinean horizontalmente */
+  gap: 25px; /* espacio entre botones */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* sombra del fondo */
+}
+
+.home-buttons button {
+  background-color: #f9b42c;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 30px; /* más redondeado */
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
+}
+
+.home-buttons button:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+/* 📸 Imagen de Matías más grande y pegada al borde derecho */
+.matias-image img {
+  position: absolute;
+  right: -20px; /* 👈 pegada al borde */
+  top: 47%; /* 👈 sube un poquito más */
+  transform: translateY(-50%);
+  width: 520px; /* 🔥 más grande hacia los costados */
+  height: auto;
+  max-height: 98vh; /* 🔥 crece hacia arriba sin salirse */
+  object-fit: contain;
+  border-radius: 10px;
+  z-index: 2;
+  pointer-events: none;
+  user-select: none;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
