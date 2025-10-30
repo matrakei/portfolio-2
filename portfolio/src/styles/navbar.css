@@ -1,13 +1,12 @@
 .navbar {
   background-color: #f9b42c;
   display: flex;
-  justify-content: flex-end; /* 👈 mueve todo hacia la derecha */
+  justify-content: flex-end;
   align-items: center;
   padding: 12px 90px;
   font-family: "Poppins", sans-serif;
 }
 
-/* si querés mantener el logo a la izquierda */
 .nav-logo {
   position: absolute;
   left: 90px;
@@ -27,18 +26,20 @@
   color: black;
   font-weight: 600;
   font-size: 1.1rem;
-  padding: 6px 14px; /* espacio para que se vea el fondo */
+  padding: 6px 14px;
   border-radius: 20px;
   transition: all 0.3s ease;
 }
 
-/* 💡 Fondo cuando está seleccionada la opción */
 .nav-links a.active {
-  background-color: #e6a825; /* tono más oscuro para contraste */
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+  background-color: #e6a825; /* tono más oscuro que el fondo */
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.35); /* sombra difusa alrededor */
+  padding: 6px 14px; /* mantiene el tamaño del botón */
 }
 
-/* Hover */
+
+
 .nav-links a:hover {
-  color: white;
+
 }
