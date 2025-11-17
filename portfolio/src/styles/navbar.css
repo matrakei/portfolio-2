@@ -1,45 +1,61 @@
 .navbar {
-  background-color: #f9b42c;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0px -10px;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-  padding: 12px 90px;
+  background: transparent; /* 🔥 fondo transparente */
+  z-index: 10;
   font-family: "Poppins", sans-serif;
 }
 
-.nav-logo {
-  position: absolute;
-  left: 90px;
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: black;
-}
-
+/* lista */
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 35px;
+  gap: 40px;
 }
 
+/* Links base */
 .nav-links a {
   text-decoration: none;
-  color: black;
-  font-weight: 600;
+  color: white; /* 🔥 texto blanco como el wireframe */
+  font-weight: 500;
   font-size: 1.1rem;
-  padding: 6px 14px;
-  border-radius: 20px;
+  padding-bottom: 6px; /* espacio para la línea */
   transition: all 0.3s ease;
+  position: relative;
 }
 
-.nav-links a.active {
-  background-color: #e6a825; /* tono más oscuro que el fondo */
-  border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.35); /* sombra difusa alrededor */
-  padding: 6px 14px; /* mantiene el tamaño del botón */
-}
-
-
-
+/* Hover suave */
 .nav-links a:hover {
+  color: #fcbc46;
+}
 
+/* Línea inferior animada */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: #fcbc46;
+  transition: width 0.3s ease;
+}
+
+/* Hover muestra la línea */
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ACTIVO (la página donde estás) */
+.nav-links a.active {
+  color: #fcbc46; /* amarillo */
+  font-weight: 600;
+}
+
+.nav-links a.active::after {
+  width: 100%; /* línea visible */
 }
