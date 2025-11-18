@@ -1,163 +1,187 @@
-/* ---------- LAYOUT GENERAL ---------- */
+/* ============================================
+   SECCIÓN GENERAL
+============================================ */
 .contacto {
   background-color: black;
-  color: black;
+  color: white;
   min-height: 100vh;
-  padding: 20px 100px 60px 100px;
+  padding: 20px 100px 80px 100px;
   text-align: center;
+  font-family: "Inter", sans-serif;
+
   background-image: url('../assets/dibujo.png');
   background-repeat: no-repeat;
   background-size: 520px;
-  background-position: 0 90%;
-  overflow: hidden;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  background-position: 0 92%;
 }
 
-/* ---------- TITULOS SUPERIORES ---------- */
+/* Títulos */
 .contacto-titulo {
   font-size: 3rem;
-  color: #F9B844;
   font-weight: 700;
-  margin-bottom: 8px;
+  color: #F9B844;
 }
 
 .contacto-subtitulo {
+  margin-top: -10px;
+  margin-bottom: 35px;
   font-size: 1.1rem;
-  margin-bottom: 25px;
 }
 
-/* ---------- BLOQUE MEDIOS DE CONTACTO ---------- */
+/* ============================================
+   MEDIOS DE CONTACTO — REDISEÑADOS
+============================================ */
+
+/* Contenedor general de medios */
 .contacto-medios {
-  background-color: #c08c2b;
-  border-radius: 20px;
-  padding: 20px 35px;
-  width: 80%;
-  margin: 0 auto; 
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+  gap: 18px;
+  align-items: center;
 }
 
-/* ✅ Espacio entre redes y formulario */
-.contacto-form-wrapper {
-  margin-top: 50px; /* 🔼 agrega el espacio exacto entre las redes y el texto del form */
-}
-
+/* Fila centrada */
 .fila {
   display: flex;
-  justify-content: space-between;
-  gap: 25px;
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
 }
 
+/* Cajita angosta */
 .medio {
-  background-color: #F9B844;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 10px;
-  padding: 10px 20px;
-  font-weight: 600;
-  width: 48%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.icono {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-}
-
-/* ---------- FORMULARIO ---------- */
-.contacto-formulario {
   position: relative;
-  background-color: #c08c2b;
-  border-radius: 20px;
-  padding: 25px 40px;
+  width: 25%;
+  height: 38px;
+
+  background-color: transparent;
+  border: 2px solid #909090;
+  border-radius: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+}
+
+/* ÍCONO GENERAL */
+.icono {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* WhatsApp y Mail → icono a la izquierda */
+.fila:nth-child(1) .medio:first-child .icono,
+.fila:nth-child(2) .medio:first-child .icono {
+  left: -50px;
+}
+
+/* Instagram y LinkedIn → icono a la derecha */
+.fila:nth-child(1) .medio:last-child .icono,
+.fila:nth-child(2) .medio:last-child .icono {
+  right: -50px;
+}
+
+/* Texto */
+.medio span {
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+
+/* ============================================
+   FORMULARIO — CON AJUSTES FINALES
+============================================ */
+
+.contacto-form-wrapper {
+  margin-top: 60px;
+}
+
+.form-subtitulo {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+}
+
+.contacto-formulario {
   width: 80%;
   margin: 0 auto;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
-  transition: all 0.4s ease;
-  color: black;
+  transition: 0.25s ease;
 }
 
-/* Subtítulo del form (por fuera y centrado) */
-.form-subtitulo {
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: black;
-  pointer-events: none;
-}
-
-/* Grilla de campos (dos arriba y dos abajo) */
-.fila.form {
+/* FILA DEL FORMULARIO — MÁS ESPACIO ENTRE COLUMNAS */
+.contacto-formulario .fila {
   display: flex;
   justify-content: space-between;
-  gap: 25px;
-  margin-bottom: 12px;
+  gap: 60px;              /* 🔥 más separado horizontalmente */
+  margin-bottom: 20px;    /* 🔥 más espacio entre filas */
 }
 
+/* Campo individual */
 .campo {
   display: flex;
   flex-direction: column;
   width: 48%;
   text-align: left;
-  font-weight: 600;
 }
 
+/* Label alineado izquierda */
 .campo label {
+  color: white;
   margin-bottom: 6px;
-  color: black;
-}
-
-.campo input {
-  background-color: #f9b844;
-  border: none;
-  border-radius: 15px;
-  padding: 10px 15px;
-  font-size: 1rem;
-  outline: none;
-  color: black;
-}
-
-/* ---------- MODO EXPANDIDO (solo mensaje) ---------- */
-.contacto-formulario.expandido {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px 60px;
-}
-
-.mensaje-grande {
-  width: 100%;
+  font-weight: 600;
   text-align: left;
-  color: black;
+}
+
+/* INPUTS */
+.campo input {
+  background-color: black;
+  border: 2px solid #F9B844;
+  border-radius: 20px;
+  padding: 12px 15px;
+  color: white;
+  font-size: 0.95rem;
+  outline: none;
+  width: 100%;
+}
+
+.campo input::placeholder {
+  color: #bbbbbb;
+}
+
+/* Expandido */
+.contacto-formulario.expandido {
+  width: 80%;
+  margin-top: 10px;
 }
 
 .mensaje-grande label {
+  color: white;
   font-weight: 600;
-  margin-bottom: 10px;
-  display: block;
-  color: black;
 }
 
 .mensaje-grande textarea {
   width: 100%;
-  height: 140px;
+  height: 160px;
   max-height: 200px;
-  background-color: #f9b844;
-  border: none;
-  border-radius: 15px;
+
+  background-color: black;
+  border: 2px solid #F9B844;
+  border-radius: 20px;
+
+  color: white;
+  padding: 12px;
   font-size: 1rem;
-  padding: 12px 15px;
-  outline: none;
   resize: none;
-  transition: height 0.3s ease;
-  color: black;
+  outline: none;
 }

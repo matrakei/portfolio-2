@@ -18,11 +18,11 @@ const Contacto = () => {
         <div className="fila">
           <div className="medio">
             <img src={wpp} alt="whatsapp" className="icono" />
-            <span>+51 9 11 8888-8888</span>
+            <span>+51 9 11 6295-6608</span>
           </div>
 
           <div className="medio">
-            <span>@eligdemati</span>
+            <span>@mativernet_</span>
             <img src={ig} alt="instagram" className="icono" />
           </div>
         </div>
@@ -30,7 +30,7 @@ const Contacto = () => {
         <div className="fila">
           <div className="medio">
             <img src={mail} alt="mail" className="icono" />
-            <span>mati@gmail.com</span>
+            <span>matiasvernetm@gmail.com</span>
           </div>
 
           <div className="medio">
@@ -40,49 +40,56 @@ const Contacto = () => {
         </div>
       </div>
 
-      {/* 🟡 Formulario con espacio nuevo */}
+      {/* Formulario */}
       <div className="contacto-form-wrapper">
+
+        {!mensajeActivo && (
+          <p className="form-subtitulo">Ingrese sus datos y sera contactado</p>
+        )}
+
         <div className={`contacto-formulario ${mensajeActivo ? 'expandido' : ''}`}>
+
           {!mensajeActivo ? (
-            <>
-              <p className="form-subtitulo">Ingrese sus datos y será contactado</p>
-              <form>
-                <div className="fila">
-                  <div className="campo">
-                    <label>Nombre</label>
-                    <input type="text" />
-                  </div>
-                  <div className="campo">
-                    <label>Apellido</label>
-                    <input type="text" />
-                  </div>
+            <form>
+              <div className="fila">
+                <div className="campo">
+                  <label>Nombre</label>
+                  <input type="text" placeholder="Ingrese su nombre..." />
                 </div>
 
-                <div className="fila">
-                  <div className="campo">
-                    <label>Mail</label>
-                    <input type="email" />
-                  </div>
-                  <div className="campo">
-                    <label>Mensaje</label>
-                    <input
-                      type="text"
-                      onFocus={() => setMensajeActivo(true)} // 👈 al hacer clic en mensaje se expande
-                    />
-                  </div>
+                <div className="campo">
+                  <label>Apellido</label>
+                  <input type="text" placeholder="Ingrese su apellido..." />
                 </div>
-              </form>
-            </>
+              </div>
+
+              <div className="fila">
+                <div className="campo">
+                  <label>Mail</label>
+                  <input type="email" placeholder="Ingrese su mail..." />
+                </div>
+
+                <div className="campo">
+                  <label>Mensaje</label>
+                  <input
+                    type="text"
+                    placeholder="Ingrese mensaje..."
+                    onFocus={() => setMensajeActivo(true)} // 🔥 activa animación
+                  />
+                </div>
+              </div>
+            </form>
           ) : (
             <div className="mensaje-grande">
               <label>Mensaje</label>
               <textarea
                 autoFocus
                 placeholder="Escriba su mensaje aquí..."
-                onBlur={() => setMensajeActivo(false)} // 👈 al salir del input vuelve al form normal
+                onBlur={() => setMensajeActivo(false)} // 🔥 vuelve al form
               ></textarea>
             </div>
           )}
+
         </div>
       </div>
     </section>
