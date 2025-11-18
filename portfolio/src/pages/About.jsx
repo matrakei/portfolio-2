@@ -1,25 +1,34 @@
 import '../styles/about.css'
-import matias from '../assets/matias.png' 
+import matias from '../assets/matias.png'
 
 const About = () => {
   return (
     <section className="about">
-      <div className="about-image">
+
+      {/* Imagen de Matías */}
+      <div className="about-left">
         <img src={matias} alt="Matias" />
       </div>
 
-      <div className="about-info">
-        <h2>Sobre mí</h2>
-        <p>
-          ¡Hola! Soy Matías, estudiante apasionado por la ingeniería y la tecnología.  
-          Me gusta combinar creatividad y lógica para resolver problemas,  
-          aprender nuevas herramientas y seguir mejorando cada día.
+      {/* Info */}
+      <div className="about-right">
+        <h1>About me</h1>
+
+        <p className="descripcion">
+          Soy un estudiante de escuela secundaria y
+          tengo muchas ganas de aprender.
         </p>
-        <p>
-          Además de estudiar, disfruto mucho diseñar interfaces, aprender sobre desarrollo web,  
-          y participar en proyectos donde pueda aplicar mis conocimientos técnicos.
-        </p>
+
+        <div className="about-data">
+          <p><strong>Nombre:</strong> Matias Vernet</p>
+          <p><strong>Nacimiento:</strong> 16 Junio, 2008</p>
+          <p><strong>Dirección:</strong> Victorica 2476 BA(CABA)</p>
+          <p><strong>email:</strong> matiasvernetm@gmail.com</p>
+        </div>
+
+        <button className="cv-btn">Descargar CV</button>
       </div>
+
     </section>
   )
 }

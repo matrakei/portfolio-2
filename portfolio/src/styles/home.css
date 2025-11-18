@@ -4,7 +4,7 @@
   align-items: flex-start;
   justify-content: space-between;
   padding: 60px 80px 0 80px;
-  height: 100vh;
+  height: 111vh;
   background-color: black;
   color: white;
   overflow: hidden;
@@ -20,7 +20,7 @@
 .home-text {
   z-index: 2;
   width: 50%;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 .home-text h1 {
