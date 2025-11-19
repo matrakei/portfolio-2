@@ -1,0 +1,84 @@
+/* ============================================
+   SECCIÓN GENERAL
+============================================= */
+.habilidades {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  padding: 40px 80px;
+  font-family: "Inter", sans-serif;
+
+  background-image: url('../assets/engranajes.png');
+  background-repeat: no-repeat;
+  background-size: 165px;            /* ✔ mantiene tamaño */
+  background-position: right 45%;    /* ✔ más abajo sin cambiar el tamaño */
+}
+
+/* Título */
+.hab-titulo {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #F9B844;
+  margin-bottom: 20px;
+}
+
+/* Lista de puntos */
+.hab-lista {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  width: 75%;
+}
+
+/* ============================================
+   CARDS
+============================================= */
+
+.hab-cards {
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding-left: 20px;
+}
+
+/* Card individual */
+.hab-card {
+  width: 22%;
+  text-align: center;
+}
+
+/* Título encima del icono */
+.hab-card-titulo {
+  color: #F9B844;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Icono con borde */
+.hab-icono {
+  width: 105px;
+  height: 105px;
+  margin: 0 auto;
+  border: 1px solid #F9B844;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hab-icono img {
+  width: 63px;
+  height: 63px;
+  object-fit: contain;
+}
+
+/* Texto debajo del icono */
+.hab-card-desc {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #7F7F7F;           /* ✔ nuevo color */
+}
